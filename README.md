@@ -5,7 +5,7 @@
 **Staff Engineer, AIOps at SPH Media · Hands-on AI & Data Architect**<br>
 Agentic AI · LLM / RAG platforms · Real-time recommender systems · MLOps
 
-[![Open to Principal Engineer roles](https://img.shields.io/badge/Open_to-Principal_Engineer_roles-10B981?style=for-the-badge)](https://www.linkedin.com/in/shankar-saran-singh)
+[![Open to Principal Engineer & Architect roles](https://img.shields.io/badge/Open_to-Principal_Engineer_%26_Architect_roles-10B981?style=for-the-badge)](https://www.linkedin.com/in/shankar-saran-singh)
 [![Singapore](https://img.shields.io/badge/📍_Singapore-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/shankar-saran-singh)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shankar-saran-singh)
 [![Email](https://img.shields.io/badge/Email-shankarsaran620%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shankarsaran620@gmail.com)
@@ -20,14 +20,19 @@ I've spent 14 years building data and AI systems, the last 7+ at SPH Media in Si
 
 Most of my time (roughly 80%) is hands-on: designing systems, writing code, debugging and keeping things running in production. The rest goes into helping a team of up to 18 engineers get unblocked, reviewing designs and code, and mentoring juniors.
 
-I'm **open to Principal Engineer roles** in AI platforms, agentic AI or ML infrastructure.
+I'm **open to Principal Engineer and Architect roles**.
+
+Most of my code lives in SPH's internal GitHub, so this profile is an overview of my work rather than a code portfolio.
 
 ## What I'm working on now
 
+- **Newsroom AI tools.** An AI editor that journalists across SPH's major titles use to draft articles with the right background and context, and a chatbot used by SPH's Chinese-language publications.
 - **Agentic incident remediation.** Directed LangGraph workflows where agents work through a production incident, draft a fix and open a pull request. An engineer approves every PR before it merges.
-- **Self-hosted LLM.** AI Singapore's `Qwen-SEA-LION-v4.5-27B-IT`, deployed in-house on GCP and served to applications through our AWS LLM gateway. It's built for Southeast Asian languages, including Malay and Tamil.
+- **Self-hosted LLM.** AI Singapore's `Qwen-SEA-LION-v4.5-27B-IT`, deployed in-house on GCP and served to applications through our AWS LLM gateway. We hosted it ourselves because no managed API existed at the time, no SLA was on offer, and data governance and privacy rules required data to stay in-house.
 - **Fact-checking (RAG).** A system that retrieves evidence and checks claims against it, meant to be shared across teams.
 - **AI citation for newsrooms.** Tracking how AI answer engines such as ChatGPT, Google AI Overviews and Perplexity cite our journalism.
+- **Post-campaign reports.** Rule-based report generation for advertising campaigns, with an LLM layer that adapts each report on the fly because every campaign has different parameters.
+- **Data platform support.** Architecture support for the data team's pipelines, including the ongoing migration from the data lake to the data warehouse.
 - **Guardrails and evaluation.** Prompt-injection checks, PII redaction, grounding checks and output schema validation. Lightweight models score responses first, and a human reviewer makes the final call.
 
 ```mermaid
@@ -39,7 +44,7 @@ flowchart LR
     end
 
     subgraph LLM["LLM platform"]
-        APP["Newsroom apps<br/>fact-check · AI citation"] --> G["Guardrails"]
+        APP["LLM applications"] --> G["Guardrails"]
         G --> GW["LLM gateway (AWS)"]
         GW --> SL["SEA-LION on GCP"]
         SL --> E["Lightweight evaluator models"]
@@ -49,7 +54,7 @@ flowchart LR
 
 ## Things I've built before
 
-- **Real-time recommendation platform** for SPH's news and ad products. Content embeddings and reader behaviour feed OpenSearch vector search, with inference on AWS EKS serving millions of users.
+- **Real-time recommendation platform** for SPH's news and ad products, serving millions of users on AWS EKS. It runs self-hosted open-source models (NRMS, SBERT MPNet and multilingual sentence embeddings) with OpenSearch vector search and a reranker we built in-house.
 - **Batch and streaming data platform** on Spark, PySpark, Kafka and Airflow, processing millions of transactions a day. Reworking the backfill jobs to run in parallel cut backfill windows by 50%.
 - **CI/CD for services and ML models** on GitHub Actions, Jenkins and ArgoCD, which raised model deployment velocity by 40%.
 - **AWS cost governance in Terraform**, which brought annual compute spend down by 25%.
@@ -117,5 +122,5 @@ flowchart LR
 
 ## Get in touch
 
-Happy to talk about Principal Engineer roles, agentic AI or LLM platforms.<br>
+Happy to talk about Principal Engineer and Architect roles, agentic AI or LLM platforms.<br>
 [LinkedIn](https://www.linkedin.com/in/shankar-saran-singh) · [shankarsaran620@gmail.com](mailto:shankarsaran620@gmail.com)
